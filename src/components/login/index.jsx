@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'react-grid-system';
+import { Row, Col } from 'react-grid-system';
 import * as globalStyled from '../../styles/globalStyles';
 import * as Styled from './styles';
 import MaterialIcon from 'material-icons-react';
@@ -32,6 +32,7 @@ class LoginPage extends Component {
               <globalStyled.pageCtaButton>로그인 하기</globalStyled.pageCtaButton>
             </Col>
           </Row>
+          <Styled.loginDesc>혹시 계정이 없으신가요? <a href="#">회원 가입하기</a></Styled.loginDesc>
         </Styled.loginCard>
         <Styled.logo src={require('../../assets/logo_gray.svg')} />
       </Styled.loginWrapper>

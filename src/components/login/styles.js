@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor, whiteColor, gray200 } from '../../styles/colorVariables';
+import { gray200, primaryColor } from '../../styles/colorVariables';
 
 export const loginWrapper = styled.div`
   width: 100vw;
@@ -14,9 +14,16 @@ export const loginCard = styled.div`
   max-width: 540px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%) translateX(-50%);
   border-radius: .5rem;
+`;
+
+export const loginDesc = styled.p`
+  font-size: .875rem;
+  a {
+    color: ${primaryColor};
+  }
 `;
 
 export const logo = styled.img`
