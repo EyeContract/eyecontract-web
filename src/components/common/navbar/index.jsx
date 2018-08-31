@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { updateUploadModal } from '../../../actions/uploadModal';
 import MaterialIcon from 'material-icons-react';
 
 import * as Styled from './styles';
@@ -13,7 +16,7 @@ const NavbarLinkItem = ({ to, children, ...rest }) => (
   </NavLink>
 );
 
-const Navbar = () => (
+const Navbar = (props) => (
   <Styled.navbarWrapper >
     <Styled.logo src={require('../../../assets/logo.svg')} alt="eyeContract" />
     <Styled.linkIcon>
@@ -22,8 +25,15 @@ const Navbar = () => (
       <NavbarLinkItem to="/chat" icon="forum" >채팅</NavbarLinkItem>
       <NavbarLinkItem to="/info" icon="person" >내 정보</NavbarLinkItem>
     </Styled.linkIcon>
-    <Styled.ctaButton><MaterialIcon icon="add" color={whiteColor}/> 새로운 문서 생성</Styled.ctaButton>
+    <Styled.ctaButton onClick={() => props.updateUploadModal(true)}><MaterialIcon icon="add" color={whiteColor}/>새로운 문서 생성</Styled.ctaButton>
   </Styled.navbarWrapper>
 );
 
-export default Navbar;
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {
+    updateUploadModal,
+  },
+  dispatch,
+);
+
+export default connect(null, mapDispatchToProps)(Navbar);
