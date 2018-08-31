@@ -1,5 +1,6 @@
 export const primaryColor = '#2e7bff';
 export const whiteColor = '#ffffff';
+export const blackColor = '#000000';
 export const gray100 = '#fafafa';
 export const gray200 = '#f5f5f5';
 export const gray300 = 'rgba(0,0,0, .54)';

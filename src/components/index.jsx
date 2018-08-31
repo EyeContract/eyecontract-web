@@ -3,11 +3,13 @@ import * as Styled from './styles';
 import Navbar from './common/navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Routes from './routes';
+import UploadModal from './common/uploadModal';
 
 const CustomRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     <Styled.AppWrapper>
       <Navbar />
+      <UploadModal/>
       <Component {...props} />
     </Styled.AppWrapper>
   )} />
