@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { gray200 } from './styles/colorVariables';
+import { gray200 } from '../styles/colorVariables';
 
 export const AppWrapper = styled.div`
   background: ${gray200};
