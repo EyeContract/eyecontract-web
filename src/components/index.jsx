@@ -20,7 +20,7 @@ const App = () => (
   <div>
     <Router>
       <Switch>
-        <Route path="/" exact component={LoginPage} />
+        {/* <Route path="/" exact component={LoginPage} /> */}
 
         {
           Routes.map((route, i) => (

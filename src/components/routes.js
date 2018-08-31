@@ -4,10 +4,10 @@ import Chat from './chat';
 import MyInfo from './my-info';
 
 export default [
-  // {
-  //   path: '/',
-  //   component: Main,
-  // },
+  {
+    path: '/',
+    component: Main,
+  },
   {
     path: '/template',
     component: Template,
